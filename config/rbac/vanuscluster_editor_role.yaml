@@ -1,0 +1,24 @@
+# permissions for end users to edit vanusclusters.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: vanuscluster-editor-role
+rules:
+- apiGroups:
+  - vanus.vanus.io
+  resources:
+  - vanusclusters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - vanus.vanus.io
+  resources:
+  - vanusclusters/status
+  verbs:
+  - get

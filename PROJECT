@@ -6,4 +6,14 @@ plugins:
   scorecard.sdk.operatorframework.io/v2: {}
 projectName: vanus-operator
 repo: github.com/linkall-labs/vanus-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: vanus.io
+  group: vanus
+  kind: VanusCluster
+  path: github.com/linkall-labs/vanus-operator/api/v1
+  version: v1
 version: "3"

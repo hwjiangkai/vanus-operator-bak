@@ -1,0 +1,20 @@
+# permissions for end users to view vanusclusters.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: vanuscluster-viewer-role
+rules:
+- apiGroups:
+  - vanus.vanus.io
+  resources:
+  - vanusclusters
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - vanus.vanus.io
+  resources:
+  - vanusclusters/status
+  verbs:
+  - get

@@ -1,0 +1,6 @@
+apiVersion: vanus.vanus.io/v1
+kind: VanusCluster
+metadata:
+  name: vanuscluster-sample
+spec:
+  # TODO(user): Add fields here
