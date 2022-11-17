@@ -1,0 +1,33 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  creationTimestamp: null
+  name: manager-role
+rules:
+- apiGroups:
+  - vanus.vanus.io
+  resources:
+  - vanusclusters
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - vanus.vanus.io
+  resources:
+  - vanusclusters/finalizers
+  verbs:
+  - update
+- apiGroups:
+  - vanus.vanus.io
+  resources:
+  - vanusclusters/status
+  verbs:
+  - get
+  - patch
+  - update
